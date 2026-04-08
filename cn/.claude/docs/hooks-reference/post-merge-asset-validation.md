@@ -75,7 +75,7 @@ exit $EXIT_CODE
 
 ## 代理集成
 
-当此hook报告问题时：
+当此 hook 报告问题时：
 1. 对于命名违规：手动修复或调用 `art-director` 获取指导
 2. 对于大小违规：调用 `technical-artist` 获取优化建议
 3. 对于完整审计：运行 `/asset-audit` 技能

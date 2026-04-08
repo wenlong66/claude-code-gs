@@ -62,6 +62,6 @@ exit $EXIT_CODE
 
 ## 代理集成
 
-当此hook失败时，提交者应该：
+当此 hook 失败时，提交者应该：
 1. 对于缺失的设计部分：调用 `game-designer` 代理来完成文档
 2. 对于无效的 JSON：调用 `tools-programmer` 代理或手动修复

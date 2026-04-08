@@ -2,7 +2,7 @@
 
 ## 触发条件
 
-在任何推送到远程分支之前运行。对于推送到 `develop` 和 `main` 分支是强制性的。
+在任何推送到远程分支之前运行。对推送到 `develop` 和 `main` 分支是强制性的。
 
 ## 目的
 
@@ -70,7 +70,7 @@ exit 0
 
 ## 代理集成
 
-当此hook失败时：
+当此 hook 失败时：
 1. 构建失败：调用 `lead-programmer` 进行诊断
 2. 单元测试失败：调用 `qa-tester` 识别失败的测试，并调用 `gameplay-programmer` 或相关程序员进行修复
 3. 性能回归：调用 `performance-analyst` 进行分析

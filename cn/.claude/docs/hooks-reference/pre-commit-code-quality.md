@@ -52,7 +52,7 @@ exit $EXIT_CODE
 
 ## 代理集成
 
-当此hook失败时：
+当此 hook 失败时：
 1. 对于风格违规：使用格式化工具自动修复或调用 `lead-programmer`
 2. 对于硬编码值：调用 `gameplay-programmer` 来外部化这些值
 3. 对于测试失败：调用 `qa-tester` 进行诊断，调用 `gameplay-programmer` 进行修复

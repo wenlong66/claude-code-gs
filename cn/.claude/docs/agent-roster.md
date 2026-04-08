@@ -30,7 +30,7 @@
 | `gameplay-programmer` | 游戏玩法代码 | Sonnet | 功能实现、游戏系统代码 |
 | `engine-programmer` | 引擎系统 | Sonnet | 核心引擎、渲染、物理、内存管理 |
 | `ai-programmer` | AI 系统 | Sonnet | 行为树、寻路、NPC 逻辑、状态机 |
-| `network-programmer` | 网络 | Sonnet | 网络代码、复制、延迟补偿、配对 |
+| `network-programmer` | 网络 | Sonnet | 网络代码、复制、延迟补偿、匹配 |
 | `tools-programmer` | 开发工具 | Sonnet | 编辑器扩展、管线工具、调试实用程序 |
 | `ui-programmer` | UI 实现 | Sonnet | UI 框架、屏幕、小部件、数据绑定 |
 | `technical-artist` | 技术美术 | Sonnet | 着色器、VFX、优化、艺术管线工具 |
@@ -73,5 +73,13 @@
 | ---- | ---- | ---- | ---- |
 | `unity-dots-specialist` | DOTS/ECS | Sonnet | 实体组件系统、Jobs、Burst 编译器、混合渲染器 |
 | `unity-shader-specialist` | 着色器/VFX | Sonnet | Shader Graph、VFX Graph、SRP 定制、后处理 |
-| `unity-addressables-specialist` | 资产管理 | Sonnet | Addressable 组、异步加载、捆绑包、内存、CDN |
+| `unity-addressables-specialist` | 资产管理 | Sonnet | Addressable 组、异步加载、捆绑、内存、CDN |
 | `unity-ui-specialist` | UI Toolkit/UGUI | Sonnet | UI Toolkit、UGUI Canvas、UXML/USS、数据绑定、跨平台输入 |
+
+### Godot 子专业人员
+
+| 智能体 | 子系统 | 模型 | 何时使用 |
+| ---- | ---- | ---- | ---- |
+| `godot-gdscript-specialist` | GDScript | Sonnet | 静态类型、设计模式、信号、协程、GDScript 性能 |
+| `godot-shader-specialist` | 着色器/渲染 | Sonnet | Godot 着色语言、可视化着色器、粒子、后处理 |
+| `godot-gdextension-specialist` | GDExtension | Sonnet | C++/Rust 绑定、原生性能、自定义节点、构建系统 |

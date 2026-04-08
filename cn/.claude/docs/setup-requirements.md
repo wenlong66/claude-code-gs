@@ -26,12 +26,12 @@ choco install jq
 scoop install jq
 ```
 
-**macOS**:
+**macOS**：
 ```
 brew install jq
 ```
 
-**Linux**:
+**Linux**：
 ```
 sudo apt install jq     # Debian/Ubuntu
 sudo dnf install jq     # Fedora
