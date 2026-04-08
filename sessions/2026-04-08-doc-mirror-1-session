@@ -1,0 +1,100 @@
+# Session: 2026-04-08
+
+**Started:** 本次工作会话早些时候（未记录精确时间）
+**Last Updated:** 2026-04-08 16:16:52
+**Project:** e:/work/claude-code-gs-test
+**Topic:** 中文文档镜像对齐（项目文档与工作流示例）
+
+---
+
+## What We Are Building
+
+本次会话的目标是为项目构建并对齐 `cn/` 下的中文文档镜像，保持与英文文档在目录结构、流程语义和协作协议上的一致性。
+
+范围在会话中有过调整：先翻译 README 与 `.claude` 相关文档，再对齐 `docs/` 到 `cn/docs/`；后续按你的指令将 `engine-reference` 排除在扩展翻译范围之外。整个过程重点是“忠实镜像语义”，而不是自由改写，尤其是阶段门禁、ADR 生命周期、审批式协作等关键流程术语。
+
+这样做的价值是让中文协作成员可直接使用等价文档开展工作，同时不改变项目既有开发流程。
+
+---
+
+## 用户中文指令原文摘录（保留）
+
+- “添加中文文档,首先翻译readme到readme_cn然后对照.claude docs目录翻译到cn目录里,文件结构相同”
+- “engine-reference 目录只翻译readme就行”
+- “先补齐 @.claude/skills/ @.claude/agents/ @.claude/rules 这三个目录”
+- “自动确认文件修改”
+- “接下来对 @.claude/docs做翻译处理”
+- “继续补齐,可以编辑,自动保存不必询问”
+- “@/e:/work/claude-code-gs-test/.claude/agent-memory/lead-programmer/MEMORY.md 将这个也翻译了”
+- “@/e:/work/claude-code-gs-test/CLAUDE.md 翻译到cn里”
+- “@dosc 对这个目录做文件和内容对齐”
+- “排除engine-reference”
+- “继续对齐”
+
+---
+
+## What WORKED (with evidence)
+
+- **Chinese mirror files were translated and aligned for the targeted docs/examples set** — confirmed by: successful file write operations during session and resulting documentation commits visible in recent history (`fffa1fb`, `3ee723f`).
+- **`cn/docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` was fully aligned to English source semantics** — confirmed by: final rewrite completion reported in session summary and successful write outcome.
+- **Scope changes were incorporated during execution (including excluding `engine-reference`)** — confirmed by: explicit user directives captured and reflected in subsequent work.
+
+---
+
+## What Did NOT Work (and why)
+
+- **Attempting direct edits/writes before required file reads** — failed because: tool constraints require read-before-write for existing files.
+- **Some write/edit attempts with incomplete or mismatched parameters** — failed because: tool invocation requirements were not fully satisfied in earlier attempts.
+- **Initial write attempt for `cn/docs/examples/session-design-crafting-system.md`** — failed because: target file had not been read first; resolved by reading then writing.
+
+---
+
+## What Has NOT Been Tried Yet
+
+- Final wording-polish pass to ensure exact phrasing parity between `docs/examples/README.md` and `cn/docs/examples/README.md`.
+- Broad full-tree audit to verify whether any remaining untranslated or partially aligned files still exist outside the already processed set.
+
+---
+
+## Current State of Files
+
+| File | Status | Notes |
+| --- | --- | --- |
+| `cn/CLAUDE.md` | ✅ Complete | Chinese mirror of root collaboration/config guide |
+| `cn/.claude/agent-memory/lead-programmer/MEMORY.md` | ✅ Complete | Chinese translation of lead-programmer memory file |
+| `cn/docs/CLAUDE.md` | ✅ Complete | Chinese mirror of docs-level governance rules |
+| `cn/docs/WORKFLOW-GUIDE.md` | ✅ Complete | Updated for current workflow and collaboration process |
+| `cn/docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` | ✅ Complete | Aligned with English source in this session |
+| `cn/docs/examples/README.md` | 🔄 In Progress | Mostly aligned; may still need final wording parity pass |
+| `cn/docs/examples/skill-flow-diagrams.md` | ✅ Complete | Workflow pipeline reference mirrored in Chinese |
+| `cn/docs/examples/session-adopt-brownfield.md` | ✅ Complete | Brownfield onboarding example translated |
+| `cn/docs/examples/session-design-system-skill.md` | ✅ Complete | Design-system session example translated |
+| `cn/docs/examples/session-gate-check-phase-transition.md` | ✅ Complete | Gate-check phase transition example translated |
+| `cn/docs/examples/session-story-lifecycle.md` | ✅ Complete | Story lifecycle example translated |
+| `cn/docs/examples/session-ux-pipeline.md` | ✅ Complete | UX pipeline example translated |
+| `cn/docs/examples/reverse-document-workflow-example.md` | ✅ Complete | Reverse documentation example translated |
+| `cn/docs/examples/session-design-crafting-system.md` | ✅ Complete | Crafting-system design session translated |
+| `cn/docs/examples/session-implement-combat-damage.md` | ✅ Complete | Combat damage implementation example translated |
+| `cn/docs/examples/session-scope-crisis-decision.md` | ✅ Complete | Scope-crisis decision example translated |
+
+---
+
+## Decisions Made
+
+- **保持目录结构镜像一致（英文 -> `cn/`）** — reason: 便于导航、维护与差异比对。
+- **优先保持流程语义等价而非意译润色** — reason: 这些文档直接影响实际执行与审批行为。
+- **后续范围排除 `engine-reference`** — reason: 你已明确给出范围收敛指令。
+- **镜像阶段按你的要求减少重复确认** — reason: 你明确要求“可以编辑，自动保存不必询问”。
+
+---
+
+## Blockers & Open Questions
+
+- 当前无阻塞项。
+- Open question: 是否需要再做一次 `cn/docs` 全量措辞一致性巡检，还是以当前范围收口。
+
+---
+
+## Exact Next Step
+
+先逐段对比 `docs/examples/README.md` 与 `cn/docs/examples/README.md`，仅修正措辞级不一致项；随后做一次快速范围核查，确保没有把 `engine-reference` 误纳入扩展翻译。
