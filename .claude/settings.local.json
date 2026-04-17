@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -)",
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__get_file_info",
+      "mcp__filesystem__search_files",
+      "mcp__filesystem__create_directory",
+      "mcp__filesystem__write_file",
+      "Bash(git fetch *)",
+      "Bash(git merge *)"
+    ]
+  }
+}
