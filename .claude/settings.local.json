@@ -8,7 +8,10 @@
       "mcp__filesystem__create_directory",
       "mcp__filesystem__write_file",
       "Bash(git fetch *)",
-      "Bash(git merge *)"
+      "Bash(git merge *)",
+      "mcp__fetch__fetch",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
     ]
   }
 }
