@@ -12,7 +12,9 @@
       "mcp__fetch__fetch",
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs",
-      "Bash(git rev-list *)"
+      "Bash(git rev-list *)",
+      "Bash(gh search *)",
+      "Skill(gpt-image-game:*)"
     ]
   }
 }
