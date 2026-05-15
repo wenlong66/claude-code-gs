@@ -1,0 +1,46 @@
+{
+  "name": "codex-game-studios",
+  "version": "0.1.0",
+  "description": "Game development studio workflows for Codex, with 73 skills and 49 role context cards for design, engineering, QA, production, and release.",
+  "author": {
+    "name": "Donchitos",
+    "url": "https://github.com/Donchitos"
+  },
+  "homepage": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "repository": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "game-development",
+    "game-design",
+    "skills",
+    "agents",
+    "godot",
+    "unity",
+    "unreal"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks.json",
+  "interface": {
+    "displayName": "Codex Game Studios",
+    "shortDescription": "Structured game development workflows for Codex",
+    "longDescription": "Codex Game Studios turns a Codex workspace into a structured game development studio with guided skills for concept design, engine setup, architecture, sprint planning, implementation, QA, polish, and release. The plugin includes 49 role context cards that skills can read when a workflow needs specialist perspective.",
+    "developerName": "Donchitos",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+    "privacyPolicyURL": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "termsOfServiceURL": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "defaultPrompt": [
+      "Start a guided game project workflow",
+      "Review my game design and next steps",
+      "Plan the next implementation story"
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

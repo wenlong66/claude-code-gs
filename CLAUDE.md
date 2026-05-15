@@ -1,22 +1,21 @@
-# Claude Code Game Studios -- Game Studio Agent Architecture
+# Codex Game Studios -- Compatibility Notes
 
-Indie game development managed through 49 coordinated Claude Code subagents.
-Each agent owns a specific domain, enforcing separation of concerns and quality.
+This repository is now a Codex plugin. `CLAUDE.md` is kept as a compatibility
+entrypoint for tools or workflows that still look for it, but the canonical
+configuration lives in the Codex plugin structure.
 
-## Technology Stack
+## Primary Codex Plugin Entry Points
 
-- **Engine**: [CHOOSE: Godot 4 / Unity / Unreal Engine 5]
-- **Language**: [CHOOSE: GDScript / C# / C++ / Blueprint]
-- **Version Control**: Git with trunk-based development
-- **Build System**: [SPECIFY after choosing engine]
-- **Asset Pipeline**: [SPECIFY after choosing engine]
-
-> **Note**: Engine-specialist agents exist for Godot, Unity, and Unreal with
-> dedicated sub-specialists. Use the set matching your engine.
+- Plugin manifest: `.codex-plugin/plugin.json`
+- Skills: `skills/*/SKILL.md`
+- Role context cards: `agents/*.toml`
+- Hooks: `hooks.json` and `hooks/*.sh`
+- Studio workflow docs: `docs/studio/`
+- Path-scoped rules: `docs/rules/`
 
 ## Project Structure
 
-@.claude/docs/directory-structure.md
+@docs/studio/directory-structure.md
 
 ## Engine Version Reference
 
@@ -24,31 +23,26 @@ Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 ## Technical Preferences
 
-@.claude/docs/technical-preferences.md
+@docs/studio/technical-preferences.md
 
 ## Coordination Rules
 
-@.claude/docs/coordination-rules.md
+@docs/studio/coordination-rules.md
 
 ## Collaboration Protocol
 
 **User-driven collaboration, not autonomous execution.**
-Every task follows: **Question -> Options -> Decision -> Draft -> Approval**
+Every task follows: **Question -> Options -> Decision -> Draft -> Approval**.
 
-- Agents MUST ask "May I write this to [filepath]?" before using Write/Edit tools
-- Agents MUST show drafts or summaries before requesting approval
-- Multi-file changes require explicit approval for the full changeset
-- No commits without user instruction
-
-See `docs/COLLABORATIVE-DESIGN-PRINCIPLE.md` for full protocol and examples.
-
-> **First session?** If the project has no engine configured and no game concept,
-> run `/start` to begin the guided onboarding flow.
+- Skills should present concrete options before product or architecture decisions.
+- File edits should be previewed or summarized before being written when the workflow requires approval.
+- Multi-file changes should list the affected files before implementation.
+- No commits without user instruction.
 
 ## Coding Standards
 
-@.claude/docs/coding-standards.md
+@docs/studio/coding-standards.md
 
 ## Context Management
 
-@.claude/docs/context-management.md
+@docs/studio/context-management.md
